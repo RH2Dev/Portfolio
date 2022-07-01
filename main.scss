@@ -469,7 +469,7 @@ footer {
     margin: 0;
     padding: 0;
     background-color: rgba(#232323, 0.9);
-    z-index: 2000;
+    z-index: 5000;
     overflow: hidden;
     align-items: center;
     justify-content: flex-start;
@@ -546,7 +546,6 @@ footer {
       .uwuAboutInfoMe {
         margin-left: 5px;
         align-self: center;
-        z-index: 4005;
       }
     }
 
