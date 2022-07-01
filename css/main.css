@@ -303,6 +303,38 @@ h3 {
   fill: #00a1e0;
 }
 
+.uwuWork {
+  background-color: #494949;
+  width: 85vw;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+.uwuWork .uwuWorkTitle {
+  padding: 0 0 10px 10px;
+}
+.uwuWork .uwuWorkTitle h1 {
+  font-size: clamp(1.5rem, 5vw + 0.5rem, 3rem);
+  color: #b8b8b8;
+  font-weight: 700;
+}
+.uwuWork .uwuWorkImg {
+  padding: 10px;
+}
+.uwuWork .uwuWorkDesc {
+  padding: 10px;
+  color: #b8b8b8;
+  margin-bottom: 10px;
+  border: rgba(5, 5, 5, 0.25) 2px solid;
+}
+.uwuWork .uwuWorkDesc h2 {
+  font-size: clamp(1.5rem, 5vw + 0.25rem, 2.5rem);
+  font-weight: 700;
+}
+.uwuWork .uwuWorkDesc p {
+  font-size: clamp(1rem, 25vw + 0.1rem, 1.5rem);
+  font-weight: 700;
+}
+
 footer {
   height: 25px;
   background-color: rgb(52, 52, 52);
