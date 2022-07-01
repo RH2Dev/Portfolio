@@ -452,6 +452,7 @@ footer .copy-right {
   .uwuAbout .uwuAboutInfo .uwuAboutInfoMe {
     margin-left: 5px;
     align-self: center;
+    z-index: 4005;
   }
   .uwuAbout .uwuAboutMe {
     width: 100%;
@@ -480,6 +481,7 @@ footer .copy-right {
   }
   .uwuContact .uwuContactList {
     width: 60%;
+    position: absolute;
   }
   .uwuContact .uwuContactList .uwuContactTitle {
     background-color: #393939;

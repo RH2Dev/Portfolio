@@ -505,6 +505,7 @@ footer {
       .uwuAboutInfoMe {
         margin-left: 5px;
         align-self: center;
+        z-index: 4005;
       }
     }
 
@@ -537,6 +538,7 @@ footer {
 
     .uwuContactList {
       width: 60%;
+      position: absolute;
       .uwuContactTitle {
         background-color: #393939;
         padding: 10px;
