@@ -1,0 +1,576 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #393939;
+  font-family: 'poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 80vw;
+}
+
+// Navbar Styling
+.uwuNav {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(5, 5, 5, 0.1);
+  border-bottom: rgba(5, 5, 5, 0.25) 2px solid;
+}
+
+.uwu-navbar {
+  margin: 0 auto;
+  padding: 0;
+  width: 80vw;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.uwu-brand {
+  line-height: 50px;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: #b8b8b8;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    .uwu-logo {
+      color: seagreen;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.uwu-nav-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 50px;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+
+  .uwu-nav-link {
+    display: flex;
+    list-style: none;
+
+    a {
+      color: #b8b8b8;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0 0 0 25px;
+      font-weight: 700;
+    }
+
+    :hover,
+    :focus {
+      color: #b80299;
+    }
+  }
+}
+
+.uwu-burger {
+  display: none;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  div {
+    width: 30px;
+    height: 5px;
+    background-color: rgb(222, 222, 222);
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+// End of Navbar Styling
+
+.uwuContainer {
+  height: calc(100vh - 50px - 30px - 25px);
+  background-color: #494949;
+  width: 80vw;
+  margin: 15px auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.uwuContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+// Home Page Styling
+.uwuProfile {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+
+  .uwuPhotos {
+    width: calc(50% - 10px);
+    margin: 5px auto;
+    justify-self: center;
+    align-self: center;
+
+    img {
+      background-color: rgba(5, 5, 5, 0.1);
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
+  }
+  .uwuTitle {
+    width: calc(50% - 10px);
+    margin: 5px auto;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+
+    h1 {
+      font-size: clamp(2rem, calc(5vw + 0.5rem), 3rem);
+      color: #b80299;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(1rem, calc(2.5vw + 0.25rem), 1.5rem);
+      color: #b8b8b8;
+      font-weight: 500;
+    }
+  }
+}
+
+// End of Home Page Styling
+.uwuAbout {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+
+  .uwuAboutInfo {
+    width: calc(40% - 10px);
+    height: 300px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    background-color: #393939;
+    border-radius: 5px;
+
+    img {
+      background-color: rgba(5, 5, 5, 0.1);
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border-radius: 50%;
+      align-self: center;
+    }
+
+    h2 {
+      color: #b8b8b8;
+      font-size: clamp(1rem, calc(5vw + 0.25rem), 2rem);
+      font-weight: 700;
+    }
+    p {
+      color: #b8b8b8;
+      font-size: clamp(0.5rem, calc(2.5vw + 0.1rem), 1rem);
+    }
+  }
+
+  .uwuAboutMe {
+    width: calc(60% - 10px);
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    background-color: #393939;
+    height: 300px;
+    border-radius: 5px;
+
+    .uwuAboutMeContent {
+      align-self: center;
+      width: 80%;
+      h2 {
+        color: #b8b8b8;
+        font-size: clamp(1rem, calc(5vw + 0.25rem), 2rem);
+        font-weight: 700;
+        padding-bottom: 5px;
+      }
+      p {
+        color: #b8b8b8;
+        font-size: clamp(0.5rem, calc(2.5vw + 0.1rem), 1rem);
+        padding-top: 5px;
+      }
+    }
+  }
+}
+// About Me Styling
+
+// End of About Me Styling
+
+// Contact Styling
+.uwuContact {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.uwuContactImage {
+  width: calc(40% - 10px);
+  margin: 5px auto;
+  justify-self: center;
+  align-self: center;
+  padding: 5px;
+  img {
+    width: 250px;
+    height: 400px;
+    border-radius: 20px;
+  }
+}
+
+.uwuContactList {
+  width: calc(60% - 10px);
+  margin: 5px auto;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+
+  .uwuContactTitle {
+    padding-bottom: 5px;
+    h2 {
+      color: #b80299;
+      font-weight: 700;
+      font-size: clamp(1.5rem, calc(5vw + 0.25rem), 2.5rem);
+      padding-bottom: 10px;
+    }
+
+    p {
+      color: #b8b8b8;
+      font-size: clamp(0.5rem, calc(2vw + 0.1rem), 1rem);
+    }
+  }
+  .uwuContactSocials {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      color: #b8b8b8;
+      padding-top: 10px;
+
+      font-size: clamp(0.75rem, calc(3vw + 0.25rem), 1.25rem);
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .facebook {
+      svg {
+        width: 25px;
+        height: 25px;
+        path {
+          fill: #0091ff;
+        }
+      }
+    }
+    .instagram {
+      svg {
+        width: 25px;
+        height: 25px;
+        path {
+          fill: #ab0251;
+        }
+      }
+    }
+    .whatsapp {
+      svg {
+        width: 25px;
+        height: 25px;
+        path {
+          fill: #008f3b;
+        }
+      }
+    }
+    .telegram {
+      svg {
+        width: 25px;
+        height: 25px;
+        path {
+          fill: #00a1e0;
+        }
+      }
+    }
+  }
+}
+// End of Contact Styling
+
+// Footer Style
+footer {
+  height: 25px;
+  background-color: rgb(52, 52, 52);
+  padding-bottom: 0;
+
+  .copy-right {
+    line-height: 25px;
+    font-size: 0.75rem;
+    color: #b80299;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+// Tablet Size
+@media screen and (max-width: 1280px) {
+  // Navbar Media Query Medium Screen
+  .uwu-navbar {
+    width: 85vw;
+  }
+
+  .uwu-brand {
+    width: 40%;
+  }
+  .uwu-nav-items {
+    width: 60%;
+  }
+
+  .container {
+    width: 85vw;
+  }
+
+  .uwuContainer {
+    width: 85vw;
+  }
+
+  .uwuPhotos {
+    img {
+      height: 275px;
+      width: 275px;
+    }
+  }
+}
+
+// Phablet Size
+@media screen and (max-width: 960px) {
+  .container {
+    width: 90vw;
+  }
+
+  .uwuContainer {
+    width: 90vw;
+  }
+
+  .uwuPhotos {
+    img {
+      height: 250px;
+      width: 250px;
+    }
+  }
+}
+
+// Phone Size
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95vw;
+  }
+
+  // Navbar Media Query Small Screen
+  body {
+    overflow-x: hidden;
+  }
+
+  .uwu-navbar {
+    width: 90vw;
+  }
+
+  .uwu-nav-items {
+    position: absolute;
+    height: calc(100vh - 50px);
+    top: 50px;
+    right: 0px;
+    width: 200px;
+    display: none;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(#232323, 0.9);
+    z-index: 2000;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-start;
+
+    .uwu-nav-link {
+      padding: 20px 0 0 0;
+      text-align: center;
+      flex-direction: column;
+
+      a {
+        font-size: 1.3rem;
+        padding: 20px 0;
+      }
+
+      :hover,
+      :focus {
+        color: #b80299;
+      }
+    }
+  }
+
+  .uwu-burger {
+    display: block;
+  }
+
+  // Header Media Query Small Screen
+  .uwu-container {
+    width: 90vw;
+  }
+
+  .uwu-header-menu {
+    width: 45%;
+  }
+
+  .uwuContainer {
+    width: 95vw;
+  }
+
+  .uwuProfile {
+    flex-direction: column;
+    .uwuPhotos {
+      width: 100%;
+      height: calc(50% - 20px);
+      margin: 0 0 20px 0;
+      align-self: center;
+
+      img {
+        height: 225px;
+        width: 225px;
+      }
+    }
+    .uwuTitle {
+      width: 100%;
+    }
+  }
+
+  .uwuAbout {
+    flex-direction: column;
+
+    .uwuAboutInfo {
+      width: 100%;
+      flex-direction: row;
+      height: 150px;
+
+      .uwuAboutPhoto {
+        align-self: center;
+        margin-right: 5px;
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      .uwuAboutInfoMe {
+        margin-left: 5px;
+        align-self: center;
+      }
+    }
+
+    .uwuAboutMe {
+      width: 100%;
+      height: 275px;
+    }
+  }
+
+  .uwuTitle {
+    width: 95%;
+    height: calc(50% - 20px);
+    margin: 20px 0 0 0;
+  }
+
+  .uwuContact {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    .uwuContactImage {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .uwuContactList {
+      width: 60%;
+      .uwuContactTitle {
+        background-color: #393939;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 0 0 10px 0;
+      }
+
+      .uwuContactSocials {
+        background-color: #393939;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+}
+
+// Aditional Class
+.uwu-button {
+  background-color: slategray;
+  float: right;
+
+  a {
+    text-decoration: none;
+    color: seashell;
+    padding: 0.25em;
+  }
+}
+
+.uwu-nav-active {
+  transform: translateX(0%) !important;
+  display: block;
+}
+
+.uwu-active {
+  color: seagreen;
+}
