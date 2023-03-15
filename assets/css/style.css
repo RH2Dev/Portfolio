@@ -1,0 +1,582 @@
+:root {
+  --primary: #2bcbba;
+  --primary-rgb: 43, 203, 186;
+  --secondary: #7bed9f;
+  --secondary-rgb: 123, 237, 159;
+  --border: #0fb9b1;
+  --border-rgb: 15, 185, 177;
+  --font: #2f3542;
+  --font-rgb: 47, 53, 66;
+  --dark-static-: #2f3542;
+  --dark-static--rgb: 47, 53, 66;
+  --background: #f5f5f5;
+  --background-rgb: 245, 245, 245;
+  --light-static: #f3edd6;
+  --light-static-rgb: 245, 245, 245;
+}
+
+[data-theme=dark] {
+  --primary: #7bed9f;
+  --primary-rgb: 123, 237, 159;
+  --secondary: #2bcbba;
+  --secondary-rgb: 43, 203, 186;
+  --font: #f5f5f5;
+  --font-rgb: 245, 245, 245;
+  --background: #2f3542;
+  --background-rgb: 47, 53, 66;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(245, 245, 245);
+  color: var(--font);
+  background: rgb(47, 53, 66);
+  background: var(--background);
+}
+
+.uwu-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  height: 4rem;
+  border-bottom: 0.2rem solid var(--primary);
+  position: fixed;
+  width: 100%;
+  background-color: rgba(var(--font-rgb), 0.25);
+  z-index: 7500;
+}
+.uwu-nav .uwu-nav-logo {
+  color: var(--font);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.uwu-nav .uwu-nav-logo span {
+  color: var(--primary);
+}
+.uwu-nav .uwu-nav-logo:hover span {
+  color: var(--secondary);
+}
+.uwu-nav .uwu-nav-links {
+  font-size: 1.3rem;
+  font-weight: 500;
+  z-index: 8000;
+}
+.uwu-nav .uwu-nav-links a {
+  padding: 0 0.25rem;
+  color: var(--primary);
+  position: relative;
+}
+.uwu-nav .uwu-nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  transition: linear 250ms;
+  height: 0.1rem;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary);
+}
+.uwu-nav .uwu-nav-links a:hover {
+  color: var(--secondary);
+}
+.uwu-nav .uwu-nav-links a:hover::after {
+  transform: scaleX(0.5);
+}
+.uwu-nav .uwu-nav-extra .user-info {
+  display: inline-block;
+}
+.uwu-nav .uwu-nav-extra .user-info .user-info-name {
+  text-align: right;
+  line-height: 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(var(--primary-rgb), 0.75);
+}
+.uwu-nav .uwu-nav-extra .user-info .user-info-status {
+  text-align: right;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: rgba(var(--primary-rgb), 0.75);
+}
+.uwu-nav .uwu-nav-extra .user {
+  color: var(--primary);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.uwu-nav .uwu-nav-extra .user .user-button {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.uwu-nav .uwu-nav-extra .user .user-menu {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  right: -1rem;
+  background-color: var(--background);
+  border: 2px solid rgba(var(--border-rgb), 0.2);
+  border-radius: 0.5rem;
+  min-width: 100px;
+  z-index: 8001;
+}
+.uwu-nav .uwu-nav-extra .user .user-menu::before {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-left: 2px solid rgba(var(--border-rgb), 0.2);
+  border-top: 2px solid rgba(var(--border-rgb), 0.2);
+  background-color: var(--background);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.uwu-nav .uwu-nav-extra .user .user-menu a {
+  font-size: 1rem;
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  display: block;
+  position: relative;
+}
+.uwu-nav .uwu-nav-extra .user .user-menu a::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  transform: scaleX(0);
+  transition: linear 250ms;
+  height: 0.1rem;
+  bottom: 0;
+  left: 0.05rem;
+  background-color: var(--secondary);
+}
+.uwu-nav .uwu-nav-extra .user .user-menu a:hover, .uwu-nav .uwu-nav-extra .user .user-menu a:active {
+  color: var(--secondary);
+}
+.uwu-nav .uwu-nav-extra .user .user-menu a:hover::after, .uwu-nav .uwu-nav-extra .user .user-menu a:active::after {
+  transform: scaleX(0.5);
+}
+.uwu-nav .uwu-nav-extra .user:hover, .uwu-nav .uwu-nav-extra .user:active {
+  color: var(--secondary);
+}
+.uwu-nav .uwu-nav-extra .user:hover .user-menu, .uwu-nav .uwu-nav-extra .user:active .user-menu {
+  display: block;
+}
+.uwu-nav .uwu-nav-extra .dark-theme,
+.uwu-nav .uwu-nav-extra .light-theme {
+  color: var(--primary);
+  cursor: pointer;
+  margin-left: 0.5rem;
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.uwu-nav .uwu-nav-extra .uwu-hamburger {
+  margin: 0 0 0 0.5rem;
+  color: var(--primary);
+  cursor: pointer;
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.uwu-home {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.uwu-home::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(0deg, rgba(var(--background-rgb), 0.6) 5%, rgba(var(--background-rgb), 0.3) 25%, rgba(var(--background-rgb), 0.2) 35%, rgba(var(--background-rgb), 0.1) 45%, rgba(var(--background-rgb), 0) 60%);
+  position: absolute;
+  transform: rotate(180deg);
+}
+.uwu-home::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(var(--background-rgb), 1) 1%, rgba(var(--background-rgb), 0.4) 30%, rgba(var(--background-rgb), 0.3) 40%, rgba(var(--background-rgb), 0.2) 50%, rgba(var(--background-rgb), 0.1) 57.5%, rgba(var(--background-rgb), 0) 65%);
+  position: absolute;
+}
+.uwu-home .home-content {
+  width: 40rem;
+  margin: 0 5%;
+  padding: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1.25rem;
+  border-top: 0.05rem solid var(--border);
+  border-left: 0.05rem solid var(--border);
+  box-shadow: 0.35rem 0.35rem rgba(var(--border-rgb), 0.25);
+}
+.uwu-home .home-content h1 {
+  color: var(--light-static);
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+.uwu-home .home-content h1 span {
+  color: var(--border);
+  font-size: 2rem;
+}
+.uwu-home .home-content p {
+  color: var(--light-static);
+  font-size: 1rem;
+  font-weight: 500;
+  mix-blend-mode: difference;
+}
+.uwu-home .home-content button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  color: var(--light-static);
+  cursor: pointer;
+  background-color: transparent;
+  border: 0.1rem solid var(--light-static);
+}
+.uwu-home .home-content button:hover {
+  color: var(--primary);
+  border: 0.1rem solid var(--primary);
+}
+
+.uwu-about {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+.uwu-about h1 {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 2.25rem;
+}
+.uwu-about .about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--font-rgb), 0.1);
+  border-radius: 1.25rem;
+  border: 0.1rem solid rgba(var(--primary-rgb), 0.6);
+  padding: 2.5rem;
+  height: calc(100vh - 12rem);
+}
+.uwu-about .about-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.uwu-about .about-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.uwu-about .about-content p {
+  font-size: 1rem;
+  line-height: 1.1rem;
+  font-weight: 500;
+}
+.uwu-about .about-content p span {
+  font-weight: 700;
+}
+.uwu-about .about-content li {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.uwu-about .about-content .left-content {
+  padding: 0 1rem 0 0;
+  width: 50%;
+  height: 100%;
+  background-image: url(/assets/img/about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+.uwu-about .about-content .right-content {
+  padding: 0 0 0 1rem;
+  width: 50%;
+  height: 100%;
+}
+
+.uwu-project {
+  width: 90%;
+  padding-top: 6rem;
+  margin: 0 auto;
+}
+.uwu-project h1 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.uwu-project .project-content {
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: rgba(var(--font-rgb), 0.1);
+  border-radius: 1.25rem;
+  border: 0.1rem solid rgba(var(--primary-rgb), 0.6);
+  height: calc(100vh - 12rem);
+}
+.uwu-project .project-content li {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.uwu-project .project-content p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.uwu-contact {
+  width: 90%;
+  margin: 0 auto;
+  padding: 6rem 0 2.5rem 0;
+}
+.uwu-contact h1 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.uwu-contact .contact-content {
+  height: calc(100vh - 12rem);
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgba(var(--font-rgb), 0.1);
+  border-radius: 1.25rem;
+  border: 0.1rem solid rgba(var(--primary-rgb), 0.6);
+  height: calc(100vh - 12rem);
+}
+.uwu-contact .contact-content .contact-map {
+  width: 50%;
+}
+.uwu-contact .contact-content .contact-map iframe {
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  width: 100%;
+  height: 100%;
+}
+.uwu-contact .contact-content .contact-social {
+  width: 50%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.uwu-contact .contact-content .contact-social::before {
+  position: absolute;
+  content: "";
+  top: 1.5rem;
+  left: 1.5rem;
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  background-color: rgba(var(--font-rgb), 0.1);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  z-index: 2000;
+}
+.uwu-contact .contact-content .contact-social p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--font);
+}
+.uwu-contact .contact-content .contact-social .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+.uwu-contact .contact-content .contact-social .social-links a {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 7500;
+  color: var(--font);
+}
+.uwu-contact .contact-content .contact-social .social-links a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (max-width: 960px) {
+  html {
+    font-size: 77.5%;
+  }
+  .uwu-contact .contact-content {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .uwu-contact .contact-content .contact-map {
+    width: 100%;
+    height: 50%;
+  }
+  .uwu-contact .contact-content .contact-map iframe {
+    border-top-right-radius: 1.25rem;
+    border-bottom-left-radius: 0rem;
+  }
+  .uwu-contact .contact-content .contact-social {
+    width: 100%;
+    height: 50%;
+  }
+  .uwu-contact .contact-content .contact-social::before {
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 0rem;
+  }
+  .uwu-contact .contact-content .contact-social p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+  .uwu-contact .contact-content .contact-social .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+  }
+  .uwu-contact .contact-content .contact-social .social-links a {
+    width: 50%;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+  .uwu-nav .uwu-nav-links {
+    margin: 1rem;
+    background-color: rgba(var(--background-rgb), 0.75);
+    top: 4rem;
+    right: -100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 23rem;
+    width: 15rem;
+    border: 1px solid var(--primary);
+    border-bottom-left-radius: 2.5rem;
+    transition: 250ms;
+  }
+  .uwu-nav .uwu-nav-links a {
+    padding-top: 2.5rem;
+  }
+  .uwu-nav .uwu-nav-links::after {
+    content: "uwu-design";
+    position: absolute;
+    padding: 1rem;
+    width: 13rem;
+    bottom: 0;
+    right: 0;
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-align: right;
+    background-color: rgba(var(--border-rgb), 0.25);
+    border-bottom-left-radius: 2.5rem;
+  }
+  .uwu-nav .uwu-nav-extra .uwu-hamburger {
+    display: inline-block;
+  }
+  .uwu-about .about-content {
+    display: block;
+    position: relative;
+  }
+  .uwu-about .about-content .left-content {
+    width: 100%;
+    height: 100%;
+    background-position: center top;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  .uwu-about .about-content .left-content::after {
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--background-rgb), 0.5);
+  }
+  .uwu-about .about-content .right-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5rem;
+    width: 100%;
+    height: 100%;
+  }
+  .uwu-about .about-content .right-content .right-skill {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .uwu-about .about-content .right-content .right-skill div {
+    width: auto;
+  }
+  .uwu-contact .contact-content .contact-social .social-links p {
+    font-size: 1rem;
+  }
+  .uwu-contact .contact-content .contact-social .social-links a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 60%;
+  }
+  .uwu-contact .contact-content .contact-social .social-links p {
+    font-size: 1.1rem;
+  }
+  .uwu-contact .contact-content .contact-social .social-links a {
+    font-size: 1.1rem;
+  }
+}
+.active-theme {
+  display: inline-block !important;
+}
+
+.active-menu {
+  right: 0 !important;
+}

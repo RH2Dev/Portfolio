@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <title>UwuDesign</title>
+  </head>
+  <body>
+    <!-- Navbar Start-->
+    <nav class="uwu-nav" id="uwu-navbar">
+      <!-- Logo -->
+      <a href="#" class="uwu-nav-logo">Uwu<span>Design</span></a>
+
+      <!-- Link Menu -->
+      <div class="uwu-nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Extra Button -->
+      <div class="uwu-nav-extra">
+        <div class="user-info">
+          <p class="user-info-name">username</p>
+          <p class="user-info-status">status</p>
+        </div>
+        <div class="user">
+          <i data-feather="user" class="user-button"></i>
+          <div class="user-menu">
+            <a href="#">Profile</a>
+            <a href="#">Chart</a>
+            <a href="#">Login</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+        <i
+          data-feather="moon"
+          id="uwu-dark"
+          class="dark-theme"
+          onclick="switchTheme()"
+        ></i>
+        <i
+          data-feather="sun"
+          id="uwu-light"
+          class="light-theme"
+          onclick="switchTheme()"
+        ></i>
+        <i
+          data-feather="menu"
+          id="uwu-hamburger"
+          class="uwu-hamburger"
+          onclick="toggleNavbar()"
+        ></i>
+      </div>
+    </nav>
+    <!-- Navbar End-->
+
+    <!-- Home section -->
+    <section id="home" class="uwu-home">
+      <main class="home-content">
+        <h1>UwuDesign, <span>by MisterYus</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
+          veniam, fugiat explicabo veritatis tempore excepturi ipsa laborum
+          optio iusto illo.
+        </p>
+        <button>Hire Me</button>
+      </main>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="uwu-about">
+      <h1>About Me</h1>
+      <main class="about-content">
+        <div class="left-content"></div>
+        <div class="right-content">
+          <div class="right-backround">
+            <h2>Latar Belakang</h2>
+            <p>
+              <span>Lahir pada 10 Mei tahun 1999,</span> mulai tertarik pada
+              bidang teknologi <span>sejak usia 10 tahun</span> saat bapak saya
+              beli komputer pertama kali. Saat SMP sudah
+              <span>mahir menggunakan laptop,</span> dan sudah bisa mengikuti
+              <span>tutorial</span> oprek software HP
+              <span>berbahasa inggris</span> dari website
+              <span>XDA Developer</span> dan menjadi
+              <span>admin Group</span> Oprek HP Evercoss saat lulus SMP. Sejak
+              saat itu saya selalu tertarik mengikuti perkembangan teknologi.
+            </p>
+          </div>
+          <div class="right-skill">
+            <div>
+              <h3>Pendidikan</h3>
+              <li>2022 Node.js Course di Genesis Academy</li>
+              <li>Alumnus Amikom jurusan Sistem Informasi</li>
+              <li>2017 Lulus SMA N 2 Banguntapan</li>
+              <li>2014 Lulus SMP N 2 Piyungan</li>
+            </div>
+            <div>
+              <h3>Hard Skill</h3>
+              <li>Berdasar dari Amikom, HTML CSS PHP, MySQL, dan JS</li>
+              <li>Dokumentasi API menggunakan Postman</li>
+              <li>Bisa baca bahasa inggris</li>
+            </div>
+            <div>
+              <h3>Soft Skill</h3>
+              <li>Dapat bekerja dalam tim, komunikasi antar tim baik.</li>
+              <li>Suka ngulik sesuatu untuk mempermudah pekerjaan.</li>
+              <li>Suka Mengikuti Perkembangan Teknologi.</li>
+              <li>Bisa bekerja dalam kondisi tekanan.</li>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- Project -->
+    <section id="project" class="uwu-project">
+      <h1>My Project</h1>
+      <main class="project-content">
+        <li>2014~2015 Porting Custom ROM Android</li>
+        <p>Memporting OS Android Vendor lain agar support dengan HP Evercoss</p>
+        <li>2020~2021 Prototype Sistem Informasi Masjid</li>
+        <p>
+          Membuat Sistem Informasi Masjid untuk script teman seangkatan yang
+          kuliah di amikom menggunakan php versi 7, html, css, dan javascript
+        </p>
+        <li>2021 Ternak Akun Facebook</li>
+        <p>
+          Magang di Herbastore Indo. Mendapatkan tugas membuat 100 akun facebook
+          perbulan, yang akan digunakan untuk keperluan marketing di farcebook
+          marketplace. Ternak dilakukan menggunakan prerooted android dan
+          imacros pada browser Mozilla
+        </p>
+        <li>2022 Soda POS Mobile</li>
+        <p>
+          Ikut mengembangkan aplikasi SodaPos Mobile di Perusahan Esoda, sebagai
+          junior backend Developer menggunakan bahasa php versi 7 dengan
+          framework CodeIgniter versi 4
+        </p>
+      </main>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="uwu-contact">
+      <h1>Contact Me</h1>
+      <main class="contact-content">
+        <div class="contact-map">
+          <div class="gmap_canvas">
+            <iframe
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Jl. Sitimulyo Jl. Somokaton No.55, Somokatu, Sitimulyo, Kec. Piyungan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55792&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 100%;
+                width: 100%;
+              }
+            </style>
+          </div>
+        </div>
+        <div class="contact-social">
+          <p>Social media</p>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Telegram</a>
+            <a href="#">Email</a>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/darkTheme.js"></script>
+  </body>
+</html>
