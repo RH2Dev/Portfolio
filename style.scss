@@ -58,7 +58,7 @@ body {
   border-bottom: 0.2rem solid var(--primary);
   position: fixed;
   width: 100%;
-  background-color: rgba(var(--font-rgb), 0.25);
+  background-color: rgba(var(--background-rgb), 0.5);
   z-index: 7500;
 
   .uwu-nav-logo {
@@ -315,6 +315,14 @@ body {
       &:hover {
         color: var(--primary);
         border: 0.1rem solid var(--primary);
+
+         a {
+          color: var(--primary);
+         }
+      }
+
+      a {
+        color: var(--light-static);
       }
     }
   }
@@ -399,7 +407,7 @@ body {
     background-color: rgba(var(--font-rgb), 0.1);
     border-radius: 1.25rem;
     border: 0.1rem solid rgba(var(--primary-rgb), 0.6);
-    height: calc(100vh - 12rem);
+    // height: calc(100vh - 12rem);
 
     li {
       font-size: 1.5rem;
